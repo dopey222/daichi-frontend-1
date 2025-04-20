@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/ask', { prompt });
+      const res = await axios.post('https://49f9-240b-10-22a1-6700-cb94-1bfc-e639-417a.ngrok-free.app', { prompt });
       const reply = res.data.choices[0].message.content;
       setResponse(reply);
     } catch (error) {
